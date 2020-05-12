@@ -8,14 +8,26 @@ void main() {
 
 // Clase raíz
 class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Panem',
+      home: PagCritica()
+    );
+  }
+}
+
+// Clase para nuestra página de críticas
+class PagCritica extends StatelessWidget {
   
   final String userTitle = "Mi crítica de la última Kung Fu Panda";
   final String filmName = "Kung Fu Panda 3";
   final String userName = "LeiaSky77";
-  final String userPic = 'images/user_pic.jpg';
+  final String userPic = 'images/caro.jpg';
   final String userReview = 'Kung Fu Panda 3 es una buena película. Tiene buenos chistes, una trama bien construida, personajes '
                             'cómicos, etc. El problema es que no es la primera, sino la tercera entrega de una saga. Todo eso ya '
                             'estaba antes, y ahora no se aparta ni un ápice del camino ya recorrido. Es hora de innovar o morir.';
+    final String filmPic = 'images/kfp3.jpg';
   
   @override
   Widget build(BuildContext context) {
@@ -83,7 +95,7 @@ class MyApp extends StatelessWidget {
                 )
               ],
             ),
-          ),          
+          ),
         ],
       ),
     );
@@ -110,25 +122,22 @@ class MyApp extends StatelessWidget {
       ),
     );
 
-    return MaterialApp(
-      title: 'Demo layout',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Demo layout'),
-        ),
-        body: ListView(
-          children: [
-            Image.asset(
-              'images/kfp3.jpg',
-              width: 600,
-              height: 240,
-              fit: BoxFit.cover,
-            ),
-            titleSection,            
-            textSection,
-            buttonSection,
-          ],
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Panem'),
+      ),
+      body: ListView(
+        children: [
+          Image.asset(
+            'images/kfp3.jpg',
+            width: 600,
+            height: 240,
+            fit: BoxFit.cover,
+          ),
+          titleSection,            
+          textSection,
+          buttonSection,
+        ],
       ),
     );
   }
