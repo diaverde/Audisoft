@@ -1,5 +1,5 @@
 // Clase Usuario para manejar los datos esperados
-class Usuario {
+class Review {
   final String userTitle;
   final String filmName;
   final String userName;
@@ -7,5 +7,5 @@ class Usuario {
   final String userReview;
   final String filmPic;
 
-  Usuario({this.userTitle, this.filmName, this.userName, this.userPic, this.userReview, this.filmPic});
+  Review({this.userTitle, this.filmName, this.userName, this.userPic, this.userReview, this.filmPic});
 }

@@ -1,16 +1,16 @@
 // Librerías a importar
-import 'package:curso_layout/usuario.dart';
+import 'package:curso_layout/review.dart';
 import 'package:flutter/material.dart';
 
 // Páginas a importar
 import 'critica.dart';
-import 'usuario.dart';
+import 'review.dart';
 
 
 // Clase para nuestra página inicial
 class PagInicio extends StatelessWidget {
 
-  final Usuario myUser1 = Usuario(
+  final Review myReview1 = Review(
     userTitle : "Mi crítica de la última Kung Fu Panda",
     filmName : "Kung Fu Panda 3",
     userName : "LeiaSky77",
@@ -21,7 +21,7 @@ class PagInicio extends StatelessWidget {
     filmPic : 'images/kfp3.jpg'
   );
 
-  final Usuario myUser2 = Usuario(
+  final Review myReview2 = Review(
     userTitle : "Las diferencias no son tan malas",
     filmName : "Yo antes de ti",
     userName : "BobbieCruz",
@@ -32,7 +32,7 @@ class PagInicio extends StatelessWidget {
     filmPic : 'images/mby.jpg'
   );
 
-  final Usuario myUser3 = Usuario(
+  final Review myReview3 = Review(
     userTitle : "Agatha Christie vive en el siglo XXI",
     filmName : "Entre navajas y secretos",
     userName : "Cata666",
@@ -94,25 +94,25 @@ class PagInicio extends StatelessWidget {
     Widget reviewSection = Column(      
       children: [
         InkWell(
-          child: _review(myUser1),
+          child: _review(myReview1),
           onTap: () {
-            usuario = myUser1;
+            review = myReview1;
             Navigator.pushNamed(context, '/critica');
           }
         ),
         Divider(thickness: 2, height: 0, indent: 20, endIndent: 20),
         InkWell(
-          child: _review(myUser2),
+          child: _review(myReview2),
           onTap: () {
-            usuario = myUser2;
+            review = myReview2;
             Navigator.pushNamed(context, '/critica');
           }
         ),
         Divider(thickness: 2, height: 0, indent: 20, endIndent: 20),
         InkWell(
-        child: _review(myUser3),
+        child: _review(myReview3),
         onTap: () {
-            usuario = myUser3;
+            review = myReview3;
             Navigator.pushNamed(context, '/critica');
           }
         ),
@@ -138,7 +138,7 @@ class PagInicio extends StatelessWidget {
   }
 
   // Método para las reseñas
-    Container _review(Usuario usuario) {
+    Container _review(Review review) {
       return Container(
         padding: const EdgeInsets.symmetric(horizontal:20, vertical: 15),
         child: Row(
@@ -147,7 +147,7 @@ class PagInicio extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 20),
               child: Image.asset(
-                usuario.userPic,
+                review.userPic,
                 height: 50,
               ),
             ),
@@ -159,7 +159,7 @@ class PagInicio extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.only(bottom: 8),
                     child: Text(
-                      usuario.userTitle,
+                      review.userTitle,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -175,7 +175,7 @@ class PagInicio extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        usuario.filmName,
+                        review.filmName,
                         style: TextStyle(
                           color: Colors.grey[600],
                         ),
@@ -192,7 +192,7 @@ class PagInicio extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        usuario.userName,
+                        review.userName,
                         style: TextStyle(
                           color: Colors.grey[600],
                         ),
@@ -206,7 +206,7 @@ class PagInicio extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Image.asset(
-                usuario.filmPic,
+                review.filmPic,
                 width: 60,
               ),
             ),

@@ -1,10 +1,5 @@
 // Librerías a importar
-import 'package:curso_layout/usuario.dart';
 import 'package:flutter/material.dart';
-
-// Páginas a importar
-import 'critica.dart';
-import 'usuario.dart';
 
 
 // Clase para nuestra página inicial

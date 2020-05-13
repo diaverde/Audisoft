@@ -1,9 +1,9 @@
 // Librerías a importar
-import 'package:curso_layout/usuario.dart';
+import 'package:curso_layout/review.dart';
 import 'package:flutter/material.dart';
 
-// Variable global con datos de usuario
-Usuario usuario;
+// Variable global con datos de una reseña
+Review review;
 
 // Clase para nuestra página de críticas
 class PagCritica extends StatelessWidget {  
@@ -20,7 +20,7 @@ class PagCritica extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 20),
             child: Image.asset(
-              usuario.userPic,
+              review.userPic,
               height: 70,              
             ),
           ),
@@ -32,7 +32,7 @@ class PagCritica extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(
-                    usuario.userTitle,
+                    review.userTitle,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
@@ -48,7 +48,7 @@ class PagCritica extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      usuario.filmName,
+                      review.filmName,
                       style: TextStyle(
                         color: Colors.grey[600],
                       ),
@@ -65,7 +65,7 @@ class PagCritica extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      usuario.userName,
+                      review.userName,
                       style: TextStyle(
                         color: Colors.grey[600],
                       ),
@@ -83,7 +83,7 @@ class PagCritica extends StatelessWidget {
     Widget textSection = Container(
       padding: const EdgeInsets.all(10),
       child: Text(
-        usuario.userReview,
+        review.userReview,
         softWrap: true,
       ),
     );
@@ -108,7 +108,7 @@ class PagCritica extends StatelessWidget {
       body: ListView(
         children: [
           Image.asset(
-            usuario.filmPic,
+            review.filmPic,
             width: 600,
             height: 240,
             fit: BoxFit.cover,
