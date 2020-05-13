@@ -1,4 +1,4 @@
-// Clase Usuario para manejar los datos esperados
+// Clase Review para manejar los datos esperados
 class Review {
   final String userTitle;
   final String filmName;
