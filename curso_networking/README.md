@@ -1,7 +1,8 @@
-# curso_rutas
+# curso_networking
+
 Proyecto de Flutter
 
 ## Comentarios
 
 Proyecto de ejemplo para iniciar el aprendizaje en Flutter.
-Presenta varias rutas que permiten la navegación entre sí.
+Presenta cómo se obtienen y se envían datos a Internet.
